@@ -1,5 +1,3 @@
-# Juego del TaTeTi
+# Practicas de desarrollo web
 
-Juego de tateti realizado con HTML, CSS y JavaScript.  
-
-Aun falta realizar el responsive Design.
+Aqui hay algunas practicas hechas con Html, Css y JavaScript
