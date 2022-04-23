@@ -1,0 +1,374 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+body {
+    font-family: italic;
+    background-color: #eef;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 16px;
+    }
+
+.section {
+
+    color: #353b48;
+}
+
+/* Aca comienza el juego */
+
+#section-game {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 65% 10%;
+    align-items: center;
+    justify-items: center;
+    margin: 2px;
+
+    width: 99.8vw;
+    height: 99.5vh;    
+    background-image: linear-gradient(120deg, #14fb 20%, #cd0b 35% 65%, #d50b 78%);
+    filter: brightness(90%);
+}
+
+    /*  Comienza el Titulo del juego */
+ .game-title {
+    align-self: flex-end;
+    grid-column:  1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+
+    color: #000;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 5rem;
+    filter: drop-shadow(0px 0px 0px #fff) drop-shadow(5px -7px 10px #333);
+}
+
+.game-title b {
+    transform: rotate(-5deg);
+}
+    /* Termina el Titulo del juego */
+
+    /*  Contenedor la grilla TATETI */
+#game {
+    justify-self: flex-end;
+    display: grid;
+    width: 80%;
+    height: 80%;
+
+    grid-template-columns: minmax(130px,160px) 10px minmax(130px,160px) 10px minmax(130px,160px);
+    grid-template-rows: minmax(130px,160px) 10px minmax(130px,160px) 10px minmax(130px,160px);
+
+
+}
+
+    /*  Comineza la edicion de los separadores de filas y columnas */
+#game > .separator {
+    border: 4.5px groove #a94;
+    border-radius: 10px;
+}
+#game > .columns-separator-1 {
+    grid-row: 1 / 6;
+    grid-column: 2 / 3;
+}
+#game > .columns-separator-2 {
+    grid-row: 1 / 6;
+    grid-column: 4 / 5;
+}
+#game > .rows-separator-1 {
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+}
+#game > .rows-separator-2 {
+    grid-column: 1 / 6;
+    grid-row: 4 / 5;
+}
+    /*  Termina la edicion de los separadores de filas y columnas */
+
+    /*  Comienza la Edicion de las celdas */
+.celda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    
+    width: 97%;
+    height: 96%;
+    margin: 1px;
+
+    list-style: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Sriracha', cursive;
+
+    text-transform: uppercase;
+    transition: background .3s;
+}
+
+.celda:hover {
+    background: #5555;
+}
+
+.selected_By_X::before {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    width: inherit;
+    height: inherit;
+    margin: inherit;
+    border-radius: inherit;
+
+    background-Color: #f002;
+    color: #d00;
+    font-Size: 4rem;
+    content: 'X';
+}
+.celda.selected_By_O::before {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    width: inherit;
+    height: inherit;
+    margin: inherit;
+    border-radius: inherit;
+
+    background-Color: #00f2;
+    border: 1px solid #00a3;
+    color: #00d;
+    font-Size: 4rem;
+    content: 'O';
+}
+    /* Termina la Edicion de las celdas */
+
+
+    /* Comienza la edicion de los turnos*/
+#turnos {
+    display: grid;
+    justify-self: flex-start;
+    grid-template-rows: 25% 1% 74%;
+    justify-items: center;
+
+    text-align:center;
+    width: 80%;
+    height: 50%;
+}
+
+.turn-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Berkshire Swash', cursive;
+    letter-spacing: 5px;
+    font-size: 200%;
+    color: #000;
+
+    height: 100%;
+    width: 100%;
+
+}
+#turnos > hr {
+    width: 50%;
+    border: ridge 2px #a94;
+}
+
+#whos-turn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+#turn-x {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    height: 130px;
+
+    background-color:  #f002;
+    color:  #d00;
+    border: 1px solid #a00;
+    border-radius: 20px;
+
+    font-size: 4rem;
+    font-family: 'Sriracha',cursive;
+}
+
+#turn-o {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    height: 130px;
+
+    background-color:  #00f2;
+    color:  #00d;
+    border: 1px solid #00a;
+    border-radius: 20px;
+
+    font-size: 4rem;
+    font-family: 'Sriracha',cursive;
+}
+
+/*  Boton para reiniciar el juego en cualquier momento */
+.reset-game-container{
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#reset-game {
+    height: 50%;
+    width: 18%;
+
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    border: none;
+    background: #2f3640;
+    color: #fff;
+    border-radius: 4px;
+}
+#reset-game:hover{
+    background: #2c3e52;
+    transform: scale(.94);
+}
+    /* ...... */
+
+/*  Comineza la edicion de la pantalla de triunfo */
+.win-screen {
+    position: absolute;
+    display: none;
+    grid-template-rows: 85% 15%;
+
+    align-items: center;
+    justify-items: center;
+
+    width: 100%;
+    height: 100%;    
+
+    background-image: linear-gradient(to bottom, #000c 0% 100%);
+    backdrop-filter: blur(10px) ;
+}
+
+/* Triunfo del jugador 1 */
+.player-x-win,.player-o-win {
+    display: grid;
+    grid-template-rows: 60% 40%;
+
+    align-items: center;
+    justify-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+.player-x-win-title {
+    font-size: 5rem;
+    font-family: 'Abril Fatface';
+
+    filter: drop-shadow(10px 5px 1px #222);
+
+    margin: auto;
+
+    animation-name: winner;
+    animation-duration: 1s;
+    animation-timing-function:cubic-bezier(0.50, 0.100, 0.50, 1) ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+.x-celebration-img {
+    align-self: start;
+    height: 60%;
+    width: 20%;
+}
+/* ...... */
+
+
+/*  Triunfo del jugador 2*/
+.player-o-win-title {
+    font-size: 5rem;
+    font-family: 'Abril Fatface';
+
+    filter: drop-shadow(10px 5px 1px #222);
+
+    margin: auto;
+
+    animation-name: winner;
+    animation-duration: 1s;
+    animation-timing-function:cubic-bezier(0.50, 0.100, 0.50, 1) ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+.o-celebration-img {
+    align-self: start;
+    height: 60%;
+    width: 20%;
+}
+/* ...... */
+
+/*  Animacion de WIN */
+@keyframes winner {
+    0%{
+        transform: scale(.9);
+        letter-spacing: 0;
+        filter: drop-shadow(10px 5px 1px #222);
+
+    }
+    100%{
+        transform: scale(1);
+        letter-spacing: 10px;
+        filter: drop-shadow(15px 10px 1px #222);
+    }
+}
+
+    /*  Boton para jugar de nuevo cuando ya finalizo el juego*/
+
+#play-again {
+    height: 40%;
+    width: 20%;
+
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    border: none;
+    background: #2f3640;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#play-again:hover {
+    background: #2c3e52;
+    transform: scale(.94);
+}
+    /* ...... */
+/* Termina la edicion de la pantalla de triunfo*/
+
+
+/* Ac� termina el juego */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Icon awesome -->
+        <script src="https://kit.fontawesome.com/35be79a473.js" crossorigin="anonymous"></script>
+        <!-- UTF-8 -->
+        <meta charset="UTF-8">
+        <!-- X-UA-Compatible -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Meta viewport -->
+        <meta name="viewport" content="widli=device-widli, initial-scale=1.0">
+        <!-- Hojas de estilo -->
+        <link rel="stylesheet" type ="text/css" href ="tateti.css">
+        <link rel="stylesheet" type = "text/css" href="normalize.css">
+        <!-- Letras -->
+        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+        <!-- Nombre e icono de la pagina -->
+        <title>TaTeTi</title>
+        <link rel="icon" href="./resources/icono.png">
+        <!--Anuncios ads amazon --> 
+    </head>
+    
+    <body>            
+        <!-- Acá comienza el juego --> 
+        <section id="section-game">
+                <h5 class="game-title">Juega al <b style="margin-left: 20px; color: #f00;">Ta</b><b style="color: #ff0;">Te</b><b style="color: #00f;">Ti</b></h5>
+                <ul id="game">
+                    <!-- fila uno -->
+                    <li class="celda "></li>
+                    <span class="columns-separator-1 separator"></span>
+                    <li class="celda"></li>
+                    <span class="columns-separator-2 separator"></span>
+                    <li class="celda"></li>
+                    <!-- fila dos -->
+                    <li class="celda"></li>
+                    <li class="celda"></li>
+                    <li class="celda"></li>
+                    <!-- fila tres -->
+                    <li class="celda"></li>
+                    <span class="rows-separator-1 separator"></span>
+                    <li class="celda"></li>
+                    <span class="rows-separator-2 separator"></span>
+                    <li class="celda"></li>
+                </ul>
+                
+                    
+                <div id="turnos">
+                    <h5 class="turn-title">Es tu turno</h5>
+                    <hr>
+                    <div id="whos-turn">
+                        <span  id="turn-x">X</span>
+                        <span  id="turn-o">O</span>
+                    </div>
+                </div>
+                <div class="reset-game-container">
+                    <button id="reset-game">REINICIAR JUEGO</button>
+                </div>
+
+            <!-- Pantallas de triunfo -->
+            <div class="win-screen">
+                <div hidden class="player-x-win">
+                    <h5  class="player-x-win-title"><b style="color: #00e;">Gana </b><b style="color: #dc0;">el jugador </b><b style="color: #e00;">UNO</b></h5>
+                    <img  class="x-celebration-img" src="./resources/player-x-win.gif" alt='"X win'>
+                </div>
+                
+                <div hidden class="player-o-win">
+                    <h5  class="player-o-win-title"><b style="color: #e00;">Gana </b><b style="color: #dc0;">el jugador </b><b style="color: #00e;">DOS</b></h5>
+                    <img class="o-celebration-img" src="./resources/player-o-win.gif" alt='"O" win'>
+                </div>
+
+                <button id="play-again">JUGAR DE NUEVO</button>
+            </div>
+            <!-- Acá termina el juego --> 
+        </section>
+
+        <script type="text/javascript" src="tateti.js"></script>
+    </body>
+</html>

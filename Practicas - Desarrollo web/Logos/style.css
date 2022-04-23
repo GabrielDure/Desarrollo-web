@@ -1,0 +1,241 @@
+html {
+    font-size: 10px;
+    background: #111;
+}
+
+body {
+    text-align: center;
+}
+
+.instagram-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem auto;
+    border-radius: 25%;
+    background: radial-gradient(
+    circle at 30% 100%,
+    #fea373 8%,
+    #f89245 20%,
+    #e2319a 40%,
+    #ca239b 55%,
+    #a422cf 77%,
+    #8322cf 90%);
+    position: relative;
+}
+
+.instagram-logo::before {
+    position: absolute;
+    content: ' ';
+    width: 63%;
+    height: 63%;
+    border: 1rem solid #fff;
+    border-radius: 25%;
+}
+
+.instagram-logo::after {
+    position: absolute;
+    content: ' ';
+    width: 28%;
+    height: 28%;
+    border: 1rem solid #fff;
+    border-radius: 50%;
+}
+
+.instagram-logo > span {
+    width: 10%;
+    height: 10%;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(4rem, -4rem);
+}
+
+.tiktok-logo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    height: 16rem;
+    width: 3rem;
+    background: #fff;
+    box-shadow: .96rem 0px #ff2165;
+    filter: drop-shadow(-1rem -.5rem #5ed);
+}
+
+.tiktok-logo::before {
+    content: ' ';
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: 3rem solid #fff;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    filter: drop-shadow(1rem 1rem #ff2165);
+    transform: translate(6.0rem, -8em) rotate(-45deg);
+}
+
+.tiktok-logo::after {
+    content: ' ';
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3rem solid #fff;
+    border-top-color: transparent;
+    filter: drop-shadow(1.35rem .1rem #ff2165 );
+    transform: translate(-3.5rem, 6rem) rotate(30deg);
+}
+
+.facebook-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    margin: 7rem auto;
+    border-radius: 20%;
+    background: #138;
+    position: relative;
+
+    border: 2.5rem solid #138;
+    border-bottom: none;
+    border-top: none;
+    overflow: hidden;
+}
+
+.facebook-logo::before {
+    content: '\20';
+    position: absolute;
+    width: 6.5rem;
+    height: 14rem;
+    border: 3rem solid #eee;
+    border-top-left-radius: 50px;
+    transform: translate(6rem, 3rem);
+}
+
+.facebook-logo::after {
+    content: ' ';
+    position: absolute;
+    height: 3rem;
+    width: 8.3rem;
+    background: #eee;
+    transform: translate(2.2rem, 1rem);
+
+}
+
+
+
+.gmail-logo {
+    display: inline-flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 15rem;
+    background: linear-gradient(to bottom, #a00 10%, #08b 20%);
+    border-radius: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0px;
+    transform: translate(-4.64rem);
+    overflow: hidden;
+    z-index: 50;
+    text-decoration: none;
+}
+
+.gmail-logo::before {
+    position: absolute;
+    content: ' ';
+    width: 5rem;
+    height: 15rem;
+    background: #a00;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: rotate(-48deg) translate(4.36rem, 0rem);
+}
+
+.gmail-logo__div1 {
+    display: inline-flex;
+    position: absolute;
+    width: 4.2rem;
+    height: 13rem;
+    background: #f33;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: translate(-5.45rem, -1.15rem) rotate(-45deg);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.gmail-logo__div1::before {
+    position: absolute;
+    content: ' ';
+    width: 5rem;
+    height: 15rem;
+    background: #a00;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: rotate(45deg) translate(-5rem, -3rem);
+}
+
+
+.gmail-logo-2 {
+    display: inline-flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 15rem;
+    background: linear-gradient(to bottom, #fa0 10%, #093 20%);
+    border-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0px;
+    transform: translate(4.5rem);
+    overflow: hidden;
+    z-index: 50;
+}
+
+.gmail-logo-2::before {
+    position: absolute;
+    content: ' ';
+    width: 5rem;
+    height: 15rem;
+    background: #fa0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: rotate(48deg) translate(-4.4rem, -4.4rem);
+    box-sizing: content-box;
+}
+
+.gmail-logo__div2 {
+    display: inline-flex;
+    position: absolute;
+    width: 4.2rem;
+    height: 13rem;
+    background: #f33;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 20px;
+    transform: translate(.8rem, -1.14rem) rotate(45deg);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.gmail-logo__div2::before {
+    position: absolute;
+    content: ' ';
+    width: 5rem;
+    height: 15rem;
+    background: #fa0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: rotate(-45deg) translate(4.53rem, -1.4rem);
+}
+

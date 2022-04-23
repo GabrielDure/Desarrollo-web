@@ -1,0 +1,50 @@
+:root {
+    --animacion-1:  desplazar 2s ease-in-out  infinite alternate both;
+    --animacion-2:  desplazar-2 2s ease-in-out  infinite alternate both;
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background: #000;
+    align-items: center;
+    justify-content: space-evenly;
+    filter: contrast(30);
+}
+
+.container__caja {
+    width: 20%;
+    height: 20%;
+    background: blue;
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+.container__caja:first-child {
+    animation: var(--animacion-1);
+}
+.container__caja:nth-child(2) {
+    animation: var(--animacion-2)
+}
+
+
+@keyframes desplazar {
+    0%{
+        transform: translate(-120%) scale(.5);
+    }
+    100%{
+        transform: translate(120%) scale(1.5);
+    }
+}
+
+@keyframes desplazar-2 {
+    0%{
+        transform: translate(120%) scale(.5);
+    }
+    100%{
+        transform: translate(-120%) scale(1.5);
+    }
+}
